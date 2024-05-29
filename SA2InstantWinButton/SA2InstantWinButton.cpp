@@ -8,7 +8,7 @@ extern "C"
 {
 	__declspec(dllexport) void OnFrame()
 	{
-		if (GameMode == GameMode_Level && (ControllerPointers[0]->press & Buttons_X))
+		if (GameState == GameStates_Ingame && (ControllerPointers[0]->press & Buttons_X))
 		{
 			if (ControllerPointers[0]->press & Buttons_B)
 				AwardWin(1);
